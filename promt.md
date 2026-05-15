@@ -1,4 +1,4 @@
-# The promts i have used during the development of this project
+## The promts i have used during the development of this project
 
 #1.Explain React useState() in simple words with real-world examples.
 #2.How does component-based architecture work in React?

@@ -1,58 +1,16 @@
-# Prodesk-IT-mission-5
-A modern and responsive Kanban Board application for managing tasks efficiently with drag-and-drop functionality, task prioritization, inline editing, and local storage support. Built with a clean UI/UX to enhance productivity and demonstrate strong frontend development skills.
-The board is divided into three sections:
+# React + Vite
 
-To Do
-In Progress
-Done
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-# Features
-Add new tasks easily
-Move tasks across different stages
-Edit tasks directly with inline editing
-Set task priorities (High, Medium, Low)
-Search tasks instantly
-Delete individual tasks
-Clear all tasks at once
-Data saved using Local Storage
-Clean and responsive UI
+Currently, two official plugins are available:
 
-# Built With
-React.js
-Tailwind CSS
-JavaScript
-Vite
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-# About the Project
-This project was created to practice modern frontend development concepts such as:
+## React Compiler
 
-State management
-Component-based architecture
-Conditional rendering
-Local storage handling
-Responsive UI design
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-It focuses on creating a smooth and interactive user experience while keeping the interface simple and easy to use.
+## Expanding the ESLint configuration
 
-# Run the Project
-npm install
-npm run dev
-
-# Project Structure
-src/
- ├── components/
- │    ├── TaskForm.jsx
- │    ├── TaskList.jsx
- │
- ├── App.jsx
- ├── Style.css
- 
-# Future Improvements
-Drag and drop functionality
-Dark mode
-Due dates and reminders
-User authentication
-Backend database integration
-
-# Author
-Built with React and passion for frontend development.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

@@ -9,14 +9,22 @@ export default function TaskList({
 }) {
 
   // Inline Editing States
-  const [editingTaskId, setEditingTaskId] = useState(null)
-  const [editedText, setEditedText] = useState("")
+
+  const [editingTaskId, setEditingTaskId] =
+    useState(null)
+
+  const [editedText, setEditedText] =
+    useState("")
+
+  // Priority Colors
 
   const priorityColors = {
     High: "border-red-500",
     Medium: "border-yellow-500",
     Low: "border-green-500"
   }
+
+  // Priority Sorting
 
   const priorityOrder = {
     High: 1,
@@ -25,19 +33,23 @@ export default function TaskList({
   }
 
   // Start Editing
+
   const handleEdit = (task) => {
 
     setEditingTaskId(task.id)
+
     setEditedText(task.text)
 
   }
 
   // Save Task
+
   const handleSave = (id) => {
 
     updateTask(id, editedText)
 
     setEditingTaskId(null)
+
     setEditedText("")
 
   }
@@ -49,7 +61,7 @@ export default function TaskList({
         bg-gray-100
         p-4
         rounded-2xl
-        min-h-500px
+        min-h-[500px]
       "
     >
 
@@ -99,13 +111,17 @@ export default function TaskList({
 
                   <input
                     type="text"
+
                     value={editedText}
+
                     onChange={(e) =>
                       setEditedText(e.target.value)
                     }
+
                     onBlur={() =>
                       handleSave(task.id)
                     }
+
                     onKeyDown={(e) => {
 
                       if (e.key === "Enter") {
@@ -115,7 +131,9 @@ export default function TaskList({
                       }
 
                     }}
+
                     autoFocus
+
                     className="
                       w-full
                       border
@@ -153,7 +171,14 @@ export default function TaskList({
 
               </div>
 
-              <div className="flex gap-2 mt-4">
+              {/* Buttons */}
+
+              <div className="
+                flex
+                flex-wrap
+                gap-2
+                mt-4
+              ">
 
                 {/* Move Left */}
 
@@ -249,7 +274,13 @@ export default function TaskList({
 
       {/* Tailwind Safe Classes */}
 
-      <div className="hidden border-red-500 border-yellow-500 border-green-500"></div>
+      <div className="
+        hidden
+        border-red-500
+        border-yellow-500
+        border-green-500
+      ">
+      </div>
 
     </div>
 

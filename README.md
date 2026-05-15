@@ -1,16 +1,59 @@
-# React + Vite
+A simple and user-friendly Kanban Board built to help organize tasks in a clean and productive way. This project allows users to create tasks, move them between different stages, edit them instantly, and keep everything saved using local storage.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The board is divided into three sections:
 
-Currently, two official plugins are available:
+To Do
+In Progress
+Done
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# Features
+Add new tasks easily
+Move tasks across different stages
+Edit tasks directly with inline editing
+Set task priorities (High, Medium, Low)
+Search tasks instantly
+Delete individual tasks
+Clear all tasks at once
+Data saved using Local Storage
+Clean and responsive UI
 
-## React Compiler
+# Built With
+React.js
+Tailwind CSS
+JavaScript
+Vite
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# About the Project
+This project was created to practice modern frontend development concepts such as:
 
-## Expanding the ESLint configuration
+State management
+Component-based architecture
+Conditional rendering
+Local storage handling
+Responsive UI design
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+It focuses on creating a smooth and interactive user experience while keeping the interface simple and easy to use.
+
+# Run the Project
+npm install
+npm run dev
+
+# Project Structure
+src/
+ ├── components/
+ │    ├── TaskForm.jsx
+ │    ├── TaskList.jsx
+ │    ├── ProgressTracker.jsx
+ │
+ ├── App.jsx
+ ├── Style.css
+ 
+# Future Improvements
+Drag and drop functionality
+Dark mode
+Due dates and reminders
+User authentication
+Backend database integration
+
+# Author
+Built with React and passion for frontend development.

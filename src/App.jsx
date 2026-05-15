@@ -27,6 +27,8 @@ export default function App() {
   const [editedText, setEditedText] =
     useState("")
 
+  // Save To LocalStorage
+
   useEffect(() => {
 
     localStorage.setItem(
@@ -40,7 +42,15 @@ export default function App() {
 
   const addTask = (task) => {
 
-    setTasks([...tasks, task])
+    const newTask = {
+
+      ...task,
+
+      id: Date.now()
+
+    }
+
+    setTasks([...tasks, newTask])
 
   }
 
@@ -100,7 +110,7 @@ export default function App() {
 
   }
 
-  // Clear All
+  // Clear All Tasks
 
   const clearTasks = () => {
 
@@ -146,7 +156,12 @@ export default function App() {
 
       {/* Search */}
 
-      <div className="mt-6 mb-6 flex justify-center">
+      <div className="
+        mt-6
+        mb-6
+        flex
+        justify-center
+      ">
 
         <input
           type="text"
@@ -174,7 +189,7 @@ export default function App() {
 
       </div>
 
-      {/* Columns */}
+      {/* Kanban Columns */}
 
       <div className="
         grid
@@ -231,13 +246,23 @@ export default function App() {
                   <div
                     key={task.id}
 
-                    className="
+                    className={`
                       bg-gray-100
                       p-3
                       rounded-lg
                       mb-3
                       shadow-sm
-                    "
+                      border-l-4
+
+                      ${task.priority === "High"
+                        ? "border-red-500"
+
+                        : task.priority === "Medium"
+                        ? "border-yellow-500"
+
+                        : "border-green-500"
+                      }
+                    `}
                   >
 
                     {/* Inline Editing */}
@@ -294,6 +319,16 @@ export default function App() {
                       </p>
 
                     )}
+
+                    {/* Priority + Category */}
+
+                    <p className="
+                      text-gray-500
+                      text-sm
+                      mt-1
+                    ">
+                      {task.priority} • {task.category}
+                    </p>
 
                     {/* Buttons */}
 

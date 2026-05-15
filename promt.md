@@ -1,6 +1,7 @@
 # The promts i have used during the development of this project
 
-##1.Explain React useState() in simple words with real-world examples.
+##1
+Explain React useState() in simple words with real-world examples.
 ##2.How does component-based architecture work in React?
 #3.Teach me the difference between props and state.
 #4.Explain how Kanban boards work internally.
